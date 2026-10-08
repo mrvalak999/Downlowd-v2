@@ -19,11 +19,11 @@ jobs:
           distribution: 'temurin'
           cache: gradle
 
-      - name: Check Gradle version
-        run: ./gradlew --version
-
       - name: Make gradlew executable
         run: chmod +x gradlew
+
+      - name: Check Gradle version
+        run: ./gradlew --version
 
       - name: Build Debug APK
         run: ./gradlew assembleDebug --stacktrace
